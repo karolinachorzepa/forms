@@ -1,0 +1,86 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@karolinachorzepa 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+Cram-In
+/
+kodilla_bootcamp
+0
+01
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+kodilla_bootcamp/Modul_9/waluty/templates/corn_exchange_completed.html
+@Cram-In
+Cram-In remove empty lines
+Latest commit 8d3928f on 29 Dec 2020
+ History
+ 1 contributor
+52 lines (43 sloc)  1.85 KB
+  
+{% extends 'base.html' %}
+
+{% block head %}
+  <h1>Currency Exchange Service</h1>
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <body>
+    
+      <p>Please select Currency from the drop-down list.</p>
+    
+      <div class="first_box">
+        <form action="" method='POST'>
+          <div class="input_group">
+            <label for="currency">Choose a currency:</label>
+            <select name="currency" id="currency">
+              <option value="dolar amerykański">dolar amerykański</option>
+              <option value="dolar australijski">dolar australijski</option>
+              <option value="dolar kanadyjski">dolar kanadyjski</option>
+              <option value="euro">euro</option>
+              <option value="forint (Węgry)">forint (Węgry)</option>
+              <option value="frank szwajcarski">frank szwajcarski</option>
+              <option value="funt szterling">funt szterling</option>
+              <option value="jen (Japonia)">jen (Japonia)</option>
+              <option value="korona czeska">korona czeska</option>
+              <option value="korona duńska">korona duńska</option>
+              <option value="korona norweska">korona norweska</option>
+              <option value="korona szwedzka">korona szwedzka</option>
+              <option value="SDR (MFW)">SDR (MFW)</option>
+            </select>
+            <br><br>
+          </div>
+        
+          <label for="amount">State amount you like to exchange:</label><br>
+          <input type="number" id="amount" name="amount" min="0" required>
+          <input type="submit" value="Calculate">
+        </form>
+      </div>
+
+        <div class="result">
+          <h2>You will get:</h2>
+            <h3>For {{ amount }} of {{ currency }}</h3>
+              <h3>You will get:</h3>
+                <h4>{{ score }} PLN</h4>
+            
+        </div>
+
+    </body>
+</div>
+{% endblock %}
